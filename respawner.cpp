@@ -55,13 +55,27 @@ int respawner::update()
 	cout << "lastBirth- " << lastBirth << endl;
 
 
+
+
+
+	int a, b;
+
+	a = rand() % 2 + 1;
+	//cout << "a = " << a << endl;
+	if (a == 1)
+		b = 2;
+	else
+		b = 1;
+
+	//cout << "b = " << b << endl;
+
 	
-	if (lastBirth > rand()%5+5)																				// i need better random later
+	if (lastBirth > rand()%5+5)																				// i need better random later (need to check floor before spawn)
 	{
 		delete Ptr1;
 		//Ptr1 = nullptr;
 		passenger* Ptr1 = new passenger;
-		Ptr1->setPass(1,2,passTime,1);																//spawn destination birthday
+		Ptr1->setPass(a,b,passTime,1);																//spawnfloor destinationfloor birthday serialNumber
 		Ptr1->yell();
 		
 	
