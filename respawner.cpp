@@ -12,13 +12,7 @@ passenger* Ptr3 = new passenger;
 
 respawner::respawner()
 {
-	passTime = 0;
-
-														// dynamic memory syntax  Ptr1->func();   
-
-	
-
-	
+	passTime = 0;	
 }
 
 int respawner::update()
@@ -36,14 +30,28 @@ int respawner::update()
 	arr[1] = Ptr2->getBirthday();
 	arr[2] = Ptr3->getBirthday();
 
+	int temp;
+	for (int pas=1;pas<size;pas++)
+	{
+		for (int i = 0; i < size-1;i++)
+		{
+			if (arr[i] > arr[i + 1])
+			{
+				temp = arr[i];
+				arr[i] = arr[i + 1];
+				arr[i + 1] = temp;
 
+			}
+		}
+	}
 
-
+	int lastBirth = passTime - arr[size-1];
 
 
 	
-	if (a == x)
+	if (lastBirth > 7)
 	{
+		delete Ptr1;
 		passenger* Ptr1 = new passenger;
 		Ptr1->setPass(1,2,passTime);																//spawn destination birthday
 		Ptr1->yell();
