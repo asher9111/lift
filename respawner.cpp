@@ -51,7 +51,8 @@ int respawner::update()
 		}
 	}
 
-	int lastBirth = passTime - arr[0];
+	int lastBirth = passTime - arr[size-1];
+	cout << "lastBirth- " << lastBirth << endl;
 
 
 	
@@ -73,4 +74,9 @@ int respawner::update()
 	
 
 	return 0;
+}
+
+void respawner::kill()
+{
+	delete Ptr1;
 }
