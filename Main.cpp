@@ -19,14 +19,6 @@ int main()
 	lift L;
 
 
-
-	passenger* Ptr1 = new passenger;
-	passenger* Ptr2 = new passenger;
-	passenger* Ptr3 = new passenger;
-
-
-	
-
 	
 
 	while (1)

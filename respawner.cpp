@@ -44,9 +44,10 @@ int respawner::update()
 	
 	if (a == x)
 	{
-		passenger p;
-		p.setPass(1,2,passTime);																//spawn destination birthday
-		p.yell();
+		passenger* Ptr1 = new passenger;
+		Ptr1->setPass(1,2,passTime);																//spawn destination birthday
+		Ptr1->yell();
+	
 	}
 	else
 	{

@@ -41,7 +41,7 @@ void passenger::setPass(int a, int b, int c)
 void passenger::yell()
 {
 	cout << "birth!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - time:" << birthTime << endl;
-	cout << "passenger spawned on floor -" << spawn << endl;
+	cout << "passenger spawned on floor: " << spawn << endl;
 }
 
 int passenger::getBirthday()
