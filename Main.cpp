@@ -19,12 +19,7 @@ int main()
 
 	lift L;
 
-	int* a = new int;
-	*a = 5;
-	
 
-	passenger* Ptr4;
-	Ptr4 = new passenger;
 
 
 	while (1)

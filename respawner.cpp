@@ -70,7 +70,7 @@ int respawner::update()
 	//cout << "b = " << b << endl;
 
 	
-	if (lastBirth > rand()%5+5)																				// i need better random later (need to check floor before spawn)
+	if (lastBirth > rand()%5+5)																		// i need better random later (need to check floor before spawn)
 	{
 		delete Ptr1;
 		//Ptr1 = nullptr;
