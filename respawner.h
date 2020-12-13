@@ -11,6 +11,7 @@ class respawner : public timer
 public:
 	respawner();
 	int update();
+	void kill();
 
 protected:
 

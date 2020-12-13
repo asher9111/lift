@@ -7,6 +7,7 @@
 #include "respawner.h"
 #include "fl00r.h"
 #include "lift.h"
+#include "passenger.h"
 
 int main()
 {
@@ -18,8 +19,13 @@ int main()
 
 	lift L;
 
-
+	int* a = new int;
+	*a = 5;
 	
+
+	passenger* Ptr4;
+	Ptr4 = new passenger;
+
 
 	while (1)
 	{

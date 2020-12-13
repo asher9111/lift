@@ -10,19 +10,25 @@ passenger* Ptr2 = new passenger;
 passenger* Ptr3 = new passenger;
 
 
+
 respawner::respawner()
 {
 	passTime = 0;	
+	
 }
 
 int respawner::update()
 {
+
+	
+
+
 	respawner::tick();
 	passTime = time;
 	cout << "time in respawner ="  << passTime << endl;
 	
 
-	const int size = 3;
+	const int size = 3;																			//calculate newest passenger
 
 	int arr[size];
 
@@ -45,13 +51,14 @@ int respawner::update()
 		}
 	}
 
-	int lastBirth = passTime - arr[size-1];
+	int lastBirth = passTime - arr[0];
 
 
 	
-	if (lastBirth > 7)
+	if (lastBirth > 7)																				// i need better random later
 	{
 		delete Ptr1;
+		Ptr1 = nullptr;
 		passenger* Ptr1 = new passenger;
 		Ptr1->setPass(1,2,passTime);																//spawn destination birthday
 		Ptr1->yell();
