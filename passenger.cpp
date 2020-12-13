@@ -20,13 +20,14 @@ void passenger::update()
 
 }
 
-void passenger::setPass(int a, int b, int c)
+void passenger::setPass(int a, int b, int c,int d)
 {
 	if (a < 3 && b < 3)
 	{
 		spawn = a;
 		destination = b;
 		birthTime = c;
+		sN = d;
 	}
 	else
 	{
@@ -37,6 +38,8 @@ void passenger::setPass(int a, int b, int c)
 		
 	}
 }
+
+
 
 void passenger::yell()
 {
