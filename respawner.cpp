@@ -5,23 +5,20 @@
 
 using namespace std;
 
-
+passenger* Ptr1 = new passenger;
+passenger* Ptr2 = new passenger;
+passenger* Ptr3 = new passenger;
 
 
 respawner::respawner()
 {
 	passTime = 0;
 
-	passenger* Ptr1 = new passenger;
-	passenger* Ptr2 = new passenger;
-	passenger* Ptr3 = new passenger;														// dynamic memory syntax  Ptr1->func();   
+														// dynamic memory syntax  Ptr1->func();   
 
-	delete Ptr1;
-	delete Ptr2;
-	delete Ptr3;
+	
 
-	//Ptr1 = 0;
-	//Ptr1->getBirthday();																	// mistake!!!!!!!! - hanging pointer
+	
 }
 
 int respawner::update()
@@ -30,13 +27,16 @@ int respawner::update()
 	passTime = time;
 	cout << "time in respawner ="  << passTime << endl;
 	
-	int a, x=0;
 
-	a = (passTime % 5)+5;
-	cout << "a = " << a << endl;
+	const int size = 3;
 
-	x = 7;																						// i need to make good random later
-	cout << "x = " << x << endl;
+	int arr[size];
+
+	arr[0] = Ptr1->getBirthday();
+	arr[1] = Ptr2->getBirthday();
+	arr[2] = Ptr3->getBirthday();
+
+
 
 
 
