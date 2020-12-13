@@ -11,7 +11,7 @@ passenger::passenger()
 	spawn = 0;
 	destination = 0;
 	birthTime = 0;
-
+	sN = 0;
 	
 }
 

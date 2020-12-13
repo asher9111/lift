@@ -55,13 +55,14 @@ int respawner::update()
 
 
 	
-	if (lastBirth > 7)																				// i need better random later
+	if (lastBirth > rand()%5+5)																				// i need better random later
 	{
 		delete Ptr1;
-		Ptr1 = nullptr;
+		//Ptr1 = nullptr;
 		passenger* Ptr1 = new passenger;
-		Ptr1->setPass(1,2,passTime);																//spawn destination birthday
+		Ptr1->setPass(1,2,passTime,1);																//spawn destination birthday
 		Ptr1->yell();
+		
 	
 	}
 	else
