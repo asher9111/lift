@@ -20,7 +20,7 @@ void passenger::update()
 
 }
 
-void passenger::setPass(int a, int b, int c,int d)
+void passenger::setPass(int a, int b, int c, int d)
 {
 	if (a < 3 && b < 3)
 	{

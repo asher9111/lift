@@ -80,7 +80,7 @@ int respawner::update()
 	{
 		delete Ptr1;
 		
-		passenger* Ptr1 = new passenger;
+		Ptr1 = new passenger ;
 		Ptr1->setPass(a,b,passTime,1);								//spawnfloor destinationfloor birthday serialNumber
 		Ptr1->yell();
 		
