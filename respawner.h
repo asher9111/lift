@@ -16,5 +16,8 @@ public:
 protected:
 
 	int passTime;
+	passenger* Ptr1;
+	passenger* Ptr2;
+	passenger* Ptr3;
 
 };

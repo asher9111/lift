@@ -6,14 +6,15 @@
 using namespace std;
 
 
-passenger* Ptr1 = new passenger;
-passenger* Ptr2 = new passenger;
-passenger* Ptr3 = new passenger;
+
 
 
 respawner::respawner()
 {
 	passTime = 0;	
+	passenger* Ptr1 = new passenger;
+	passenger* Ptr2 = new passenger;
+	passenger* Ptr3 = new passenger;
 	
 }
 
@@ -83,7 +84,7 @@ int respawner::update()
 		Ptr1->setPass(a,b,passTime,1);								//spawnfloor destinationfloor birthday serialNumber
 		Ptr1->yell();
 		
-		cout << "pass!" << endl;
+		
 	}
 	else
 	{
