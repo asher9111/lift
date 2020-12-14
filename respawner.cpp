@@ -70,12 +70,12 @@ int respawner::update()
 	//cout << "b = " << b << endl;
 
 	
-	if (lastBirth > rand()%5+5)																		//  (need to check floor before spawn)
+	if (lastBirth > rand()%5+5)									//  (need to check floor before spawn)
 	{
 		delete Ptr1;
 		//Ptr1 = nullptr;
 		passenger* Ptr1 = new passenger;
-		Ptr1->setPass(a,b,passTime,1);																//spawnfloor destinationfloor birthday serialNumber
+		Ptr1->setPass(a,b,passTime,1);								//spawnfloor destinationfloor birthday serialNumber
 		Ptr1->yell();
 		
 	
