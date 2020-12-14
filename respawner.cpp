@@ -5,10 +5,10 @@
 
 using namespace std;
 
+
 passenger* Ptr1 = new passenger;
 passenger* Ptr2 = new passenger;
 passenger* Ptr3 = new passenger;
-
 
 
 respawner::respawner()
@@ -36,6 +36,9 @@ int respawner::update()
 	arr[1] = Ptr2->getBirthday();
 	arr[2] = Ptr3->getBirthday();
 
+
+	cout << "before" << arr[0] << arr[1] << arr[2] << endl;
+
 	int temp;
 	for (int pas=1;pas<size;pas++)
 	{
@@ -50,6 +53,8 @@ int respawner::update()
 			}
 		}
 	}
+
+	cout << "after sorting"<< arr[0] << arr[1] << arr[2] << endl;
 
 	int lastBirth = passTime - arr[size-1];
 	cout << "lastBirth- " << lastBirth << endl;
@@ -70,15 +75,15 @@ int respawner::update()
 	//cout << "b = " << b << endl;
 
 	
-	if (lastBirth > rand()%5+5)									//  (need to check floor before spawn)
+	if (lastBirth > rand()%5+5)									 //  (need to check floor before spawn)
 	{
 		delete Ptr1;
-		//Ptr1 = nullptr;
+		
 		passenger* Ptr1 = new passenger;
 		Ptr1->setPass(a,b,passTime,1);								//spawnfloor destinationfloor birthday serialNumber
 		Ptr1->yell();
 		
-	
+		cout << "pass!" << endl;
 	}
 	else
 	{

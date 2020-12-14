@@ -35,6 +35,7 @@ void passenger::setPass(int a, int b, int c,int d)
 		spawn = 0;
 		destination = 0;
 		birthTime = 0;
+		sN = 0;
 		
 	}
 }
