@@ -17,3 +17,4 @@ void lift::update()
 {
 	cout << "lift update ---------" << endl;
 }
+

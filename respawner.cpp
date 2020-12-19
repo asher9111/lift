@@ -84,7 +84,7 @@ int respawner::update()
 		
 		
 		
-		if ()
+		if (Lift.Sn == 1)
 		{
 			delete Ptr1;
 			Ptr1 = new passenger;
