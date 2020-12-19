@@ -2,6 +2,7 @@
 #include "timer.h"
 #include <iostream>
 #include "passenger.h"
+#include "lift.h"
 
 using namespace std;
 
@@ -79,11 +80,38 @@ int respawner::update()
 	
 	if (lastBirth > rand()%5+5)									 //  (need to check floor before spawn)
 	{
-		delete Ptr1;
 		
-		Ptr1 = new passenger ;
-		Ptr1->setPass(a,b,passTime,1);								//spawnfloor destinationfloor birthday serialNumber
-		Ptr1->yell();
+		
+		
+		
+		if ()
+		{
+			delete Ptr1;
+			Ptr1 = new passenger;
+			Ptr1->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
+			Ptr1->yell();
+		}
+		
+		
+		
+		
+		if ()
+		{
+			delete Ptr2;
+			Ptr2 = new passenger;
+			Ptr2->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
+			Ptr2->yell();
+		}
+
+		
+		if ()
+		{
+			delete Ptr3;
+			Ptr3 = new passenger;
+			Ptr3->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
+			Ptr3->yell();
+		}
+		
 		
 		
 	}

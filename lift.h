@@ -10,6 +10,7 @@ class lift : timer
 {
 public:
 	lift();
+	int Sn;
 
 	void update();
 private:
