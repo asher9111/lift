@@ -8,9 +8,11 @@ using namespace std;
 
 
 
+
+
+
 lift::lift()
 {
-	kill = 0;
 }
 
 lift::~lift()

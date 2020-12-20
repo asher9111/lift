@@ -12,7 +12,7 @@ class respawner : public timer
 public:
 	respawner();
 	~respawner();
-	int update(passenger* , passenger* , passenger* , lift*  );											//getting 3 passengers + lift obj from main
+	void update(passenger* , passenger* , passenger* , lift*  );											//getting 3 passengers + lift obj from main
 
 protected:
 	int passTime;

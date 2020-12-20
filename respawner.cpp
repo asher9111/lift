@@ -20,7 +20,7 @@ respawner::~respawner()
 {
 }
 
-int respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* Lift )
+void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* Lift )
 {
 
 	
@@ -120,7 +120,7 @@ int respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* L
 	}
 	
 
-	return 0;
+	
 }
 
 
