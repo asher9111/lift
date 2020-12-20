@@ -17,7 +17,7 @@ passenger::passenger()
 
 void passenger::update()
 {
-
+	// here will be amazing passenger code
 }
 
 void passenger::setPass(int a, int b, int c, int d)
