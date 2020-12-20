@@ -7,9 +7,7 @@
 using namespace std;
 
 
-passenger* Ptr1 = new passenger;
-passenger* Ptr2 = new passenger;
-passenger* Ptr3 = new passenger;
+
 
 
 respawner::respawner()
@@ -84,7 +82,7 @@ int respawner::update()
 		
 		
 		
-		if (Lift.Sn == 1)
+		if ()
 		{
 			delete Ptr1;
 			Ptr1 = new passenger;

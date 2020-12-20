@@ -10,7 +10,7 @@ class respawner : public timer
 {
 public:
 	respawner();
-	int update();
+	int update(passenger*);
 	void kill();
 
 protected:

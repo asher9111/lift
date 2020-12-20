@@ -19,6 +19,10 @@ int main()
 
 	lift L;
 
+	passenger* Ptr1 = nullptr;
+	passenger* Ptr2 = nullptr;
+	passenger* Ptr3 = nullptr;
+
 
 
 
@@ -27,12 +31,10 @@ int main()
 		
 		r.update();
 		L.update();
-
+		
 		
 
-
-
-
+		
 		Sleep(1000);
 	}
 
