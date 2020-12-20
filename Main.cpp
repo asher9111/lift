@@ -17,11 +17,11 @@ int main()
 	fl00r f1;
 	fl00r f2;
 
-	lift L;
+	lift *L = new lift;
 
-	passenger* Ptr1 = nullptr;
-	passenger* Ptr2 = nullptr;
-	passenger* Ptr3 = nullptr;
+	passenger* P1 = nullptr;
+	passenger* P2 = nullptr;
+	passenger* P3 = nullptr;
 
 
 
@@ -29,8 +29,8 @@ int main()
 	while (1)
 	{
 		
-		r.update();
-		L.update();
+		r.update(P1, P2, P3, L);
+		L->update();
 		
 		
 

@@ -14,17 +14,15 @@ respawner::respawner()
 	
 {
 	passTime = 0;	
-	
-	
 }
 
-int respawner::update()
+int respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* Lift )
 {
 
 	
 
 
-	respawner::tick();
+	respawner::tick();																			//logical time inside respawner (int)
 	passTime = time;
 	cout << "time in respawner ="  << passTime << endl;
 	
@@ -82,9 +80,9 @@ int respawner::update()
 		
 		
 		
-		if ()
+		if (Lift->kill == 1)
 		{
-			delete Ptr1;
+			
 			Ptr1 = new passenger;
 			Ptr1->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
 			Ptr1->yell();
@@ -93,18 +91,18 @@ int respawner::update()
 		
 		
 		
-		if ()
+		if (Lift->kill == 2)
 		{
-			delete Ptr2;
+			
 			Ptr2 = new passenger;
 			Ptr2->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
 			Ptr2->yell();
 		}
 
 		
-		if ()
+		if (Lift->kill == 3)
 		{
-			delete Ptr3;
+			
 			Ptr3 = new passenger;
 			Ptr3->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
 			Ptr3->yell();
@@ -123,7 +121,4 @@ int respawner::update()
 	return 0;
 }
 
-void respawner::kill()
-{
-	delete Ptr1;
-}
+

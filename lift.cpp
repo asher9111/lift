@@ -12,6 +12,10 @@ lift::lift()
 {
 }
 
+lift::~lift()
+{
+}
+
 void lift::update()
 
 {
