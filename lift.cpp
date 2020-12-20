@@ -10,6 +10,7 @@ using namespace std;
 
 lift::lift()
 {
+	kill = 0;
 }
 
 lift::~lift()
@@ -20,5 +21,6 @@ void lift::update()
 
 {
 	cout << "lift update ---------" << endl;
+	kill = 1;
 }
 

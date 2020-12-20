@@ -55,6 +55,7 @@ int passenger::getBirthday()
 
 passenger::~passenger()
 {
+	this;
 	cout << "passenger destruction success" << endl;
 }
 

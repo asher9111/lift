@@ -16,6 +16,10 @@ respawner::respawner()
 	passTime = 0;	
 }
 
+respawner::~respawner()
+{
+}
+
 int respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* Lift )
 {
 
@@ -74,7 +78,7 @@ int respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* L
 	//cout << "b = " << b << endl;
 
 	
-	if (lastBirth > rand()%5+5)									 //  (need to check floor before spawn)
+	if (lastBirth > rand()%5+5)												//  (need to check floor before spawn)
 	{
 		
 		
@@ -89,13 +93,11 @@ int respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* L
 		}
 		
 		
-		
-		
 		if (Lift->kill == 2)
 		{
 			
 			Ptr2 = new passenger;
-			Ptr2->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
+			Ptr2->setPass(a, b, passTime, 2);								//spawnfloor destinationfloor birthday serialNumber
 			Ptr2->yell();
 		}
 
@@ -104,7 +106,7 @@ int respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* L
 		{
 			
 			Ptr3 = new passenger;
-			Ptr3->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
+			Ptr3->setPass(a, b, passTime, 3);								//spawnfloor destinationfloor birthday serialNumber
 			Ptr3->yell();
 		}
 		

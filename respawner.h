@@ -11,13 +11,9 @@ class respawner : public timer
 {
 public:
 	respawner();
-	int update(passenger*, passenger*, passenger*, lift*);											//getting 3 passengers + lift obj
-
-
+	~respawner();
+	int update(passenger* , passenger* , passenger* , lift* );											//getting 3 passengers + lift obj from main
 
 protected:
-
 	int passTime;
-	
-
 };
