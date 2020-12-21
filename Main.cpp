@@ -3,11 +3,14 @@
 
 #include <iostream>
 #include <windows.h>
-//#include "timer.h"
+#include "timer.h"
 #include "respawner.h"
 #include "fl00r.h"
 #include "lift.h"
 #include "passenger.h"
+
+
+
 
 int main()
 {
@@ -24,16 +27,11 @@ int main()
 	passenger* P3 = nullptr;
 
 
-
-
 	while (1)
 	{
 		
 		r.update(P1, P2, P3, L);
 		L->update();
-		
-		
-
 		
 		Sleep(1000);
 	}
