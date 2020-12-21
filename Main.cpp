@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <windows.h>
-#include "timer.h"
 #include "respawner.h"
 #include "fl00r.h"
 #include "lift.h"
@@ -22,9 +21,9 @@ int main()
 
 	lift *L = new lift;
 
-	passenger* P1 = nullptr;
-	passenger* P2 = nullptr;
-	passenger* P3 = nullptr;
+	passenger* P1 = new passenger;
+	passenger* P2 = new passenger;
+	passenger* P3 = new passenger;
 
 
 	while (1)

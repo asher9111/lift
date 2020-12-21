@@ -12,7 +12,7 @@ public:
 
 	void update();
 
-	void setPass(int, int, int, int);
+	void setPass(int = 0, int = 0, int = 0, int = 0);
 	void yell();
 	int getBirthday();
 
