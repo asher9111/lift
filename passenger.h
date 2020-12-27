@@ -1,5 +1,6 @@
 #pragma once
-
+#include "lift.h"
+#include "fl00r.h"
 #include <iostream>
 using namespace std;
 
@@ -10,7 +11,7 @@ public:
 	passenger();
 
 
-	void update();
+	void update(lift* , fl00r* , fl00r* );
 
 	void setPass(int = 0, int = 0, int = 0, int = 0);
 	void yell();

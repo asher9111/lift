@@ -16,8 +16,8 @@ int main()
 	//timer t;
 	respawner r;
 
-	fl00r f1;
-	fl00r f2;
+	fl00r* f1 = new fl00r;
+	fl00r* f2 = new fl00r;
 
 	lift *L = new lift;
 

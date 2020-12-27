@@ -1,4 +1,6 @@
 #include "passenger.h"
+#include "lift.h"
+#include "fl00r.h"
 #include <iostream>
 
 using namespace std;
@@ -13,7 +15,7 @@ passenger::passenger()
 	
 }
 
-void passenger::update()
+void passenger::update(lift* L, fl00r*  f1, fl00r* f2)
 {
 	// here will be amazing passenger code
 }
@@ -42,8 +44,8 @@ void passenger::setPass(int a, int b, int c, int d)
 
 void passenger::yell()
 {
-	cout << "birth!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - time:" << birthTime << endl;
-	cout << "passenger spawned on floor: " << spawn << endl;
+	
+	cout << "passenger spawned on floor: " << spawn << "   time "<< birthTime << endl;
 }
 
 int passenger::getBirthday()
@@ -53,7 +55,7 @@ int passenger::getBirthday()
 
 passenger::~passenger()
 {
-	this;
+
 	cout << "passenger destruction success" << endl;
 }
 

@@ -116,6 +116,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 	else
 	{
 		int status = 0;
+		cout << "no spawn !!" << endl;
 
 	}
 	

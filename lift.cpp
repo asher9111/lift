@@ -23,6 +23,6 @@ void lift::update()
 
 {
 	cout << "lift update ---------" << endl;
-	kill = 1;
+	kill = 0;
 }
 
