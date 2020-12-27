@@ -7,6 +7,7 @@
 #include "fl00r.h"
 #include "lift.h"
 #include "passenger.h"
+using namespace std;
 
 
 
@@ -17,7 +18,9 @@ int main()
 	respawner r;
 
 	fl00r* f1 = new fl00r;
+	f1->set(1);
 	fl00r* f2 = new fl00r;
+	f2->set(2);
 
 	lift *L = new lift;
 
@@ -28,10 +31,18 @@ int main()
 
 	while (1)
 	{
-		
-		r.update(P1, P2, P3, L);
-		L->update();
-		
+		cout << "START ======================================================== START" << endl;
+		r.update(P1, P2, P3, L, f1, f2);
+
+		L->update(P1, P2, P3);
+
+		f1->update();
+		f2->update();
+
+
+
+
+		cout << "END ======================================================== END" << endl;
 		Sleep(1000);
 	}
 

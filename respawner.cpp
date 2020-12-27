@@ -3,6 +3,7 @@
 #include <iostream>
 #include "passenger.h"
 #include "lift.h"
+#include "fl00r.h"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ respawner::~respawner()
 {
 }
 
-void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* Lift )
+void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* Lift, fl00r* f1, fl00r* f2 )
 {
 
 	
@@ -28,7 +29,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 
 	respawner::tick();																			//logical time inside respawner (int)
 	passTime = time;
-	cout << "time in respawner ="  << passTime << endl;
+	//cout << "time in respawner ="  << passTime << endl;
 	
 
 	const int size = 3;																			//calculate newest passenger
@@ -40,7 +41,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 	arr[2] = Ptr3->getBirthday();
 
 
-	cout << "before" << arr[0] << arr[1] << arr[2] << endl;
+	//cout << "before" << arr[0] << arr[1] << arr[2] << endl;
 
 	int temp;
 	for (int pas=1;pas<size;pas++)
@@ -57,10 +58,10 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 		}
 	}
 
-	cout << "after sorting"<< arr[0] << arr[1] << arr[2] << endl;
+	//cout << "after sorting"<< arr[0] << arr[1] << arr[2] << endl;
 
 	int lastBirth = passTime - arr[size-1];
-	cout << "lastBirth- " << lastBirth << endl;
+	//cout << "lastBirth- " << lastBirth << endl;
 
 
 
@@ -77,40 +78,77 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 
 	//cout << "b = " << b << endl;
 
+
+
+
+	bool blocker = false;
+	if (f1->passExistence == 1 && a == 1)
+		blocker = true;
+
+	if (f2->passExistence == 1 && a == 2)
+		blocker = true;
+
+
+ 
+	cout << "bloker = " << blocker << endl;
+
+
+
+
 	
 	if (lastBirth > rand()%5+5)												//  (need to check floor before spawn)
 	{
 		
-		
-		
-		
-		if (Lift->kill == 1)
-		{
-			
-			Ptr1 = new passenger;
-			Ptr1->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
-			Ptr1->yell();
-		}
-		
-		
-		if (Lift->kill == 2)
-		{
-			
-			Ptr2 = new passenger;
-			Ptr2->setPass(a, b, passTime, 2);								//spawnfloor destinationfloor birthday serialNumber
-			Ptr2->yell();
-		}
 
 		
-		if (Lift->kill == 3)
+		if (blocker != true )
 		{
-			
-			Ptr3 = new passenger;
-			Ptr3->setPass(a, b, passTime, 3);								//spawnfloor destinationfloor birthday serialNumber
-			Ptr3->yell();
+
+			if (Lift->kill == 1)
+			{
+				//delete Ptr1;
+				Ptr1 = new passenger;
+				Ptr1->setPass(a, b, passTime, 1);								//spawnfloor destinationfloor birthday serialNumber
+				Ptr1->yell();
+
+				if (a == 1)
+					f1->passExistence = 1;
+				if (a == 2)
+					f2->passExistence = 1;
+
+			}
+
+
+			if (Lift->kill == 2)
+			{
+
+				Ptr2 = new passenger;
+				Ptr2->setPass(a, b, passTime, 2);								//spawnfloor destinationfloor birthday serialNumber
+				Ptr2->yell();
+				if (a == 1)
+					f1->passExistence = 1;
+				if (a == 2)
+					f2->passExistence = 1;
+			}
+
+
+			if (Lift->kill == 3)
+			{
+
+				Ptr3 = new passenger;
+				Ptr3->setPass(a, b, passTime, 3);								//spawnfloor destinationfloor birthday serialNumber
+				Ptr3->yell();
+				if (a == 1)
+					f1->passExistence = 1;
+				if (a == 2)
+					f2->passExistence = 1;
+			}
+
 		}
-		
-		
+		else
+		{
+			cout << "passenger cannot spawn on floor -" << a << " because of passExistence" << endl;
+		}
 		
 	}
 	else

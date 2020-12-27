@@ -13,8 +13,8 @@ timer::timer()
 int timer::tick()
 {
 	time++;
-	cout << "update timer " << endl;
-	cout << "current time - " << time << endl;
+	//cout << "update timer " << endl;
+	cout << "current time - " << time << endl << endl;
 	return time;
 }
 

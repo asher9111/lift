@@ -1,5 +1,5 @@
 #include "passenger.h"
-#include "lift.h"
+
 #include "fl00r.h"
 #include <iostream>
 
@@ -15,7 +15,7 @@ passenger::passenger()
 	
 }
 
-void passenger::update(lift* L, fl00r*  f1, fl00r* f2)
+void passenger::update( fl00r*  f1, fl00r* f2)
 {
 	// here will be amazing passenger code
 }
