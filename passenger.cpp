@@ -18,12 +18,12 @@ passenger::passenger()
 
 void passenger::update( fl00r*  f1, fl00r* f2)
 {
-	// here will be amazing passenger code
+	
 	cout << "passenger " << sN << " update" << endl;
 	if (status == 0)
 	{
 		if (spawn == 1)
-		{
+		{ 
 			f1->button = 1;
 		}
 
