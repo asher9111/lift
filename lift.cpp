@@ -22,7 +22,7 @@ lift::~lift()
 {
 }
 
-void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3)
+void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl00r* f2)
 
 {
 	cout << "lift update ---------" << endl;

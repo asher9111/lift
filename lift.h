@@ -1,6 +1,6 @@
 #pragma once
 
-
+#include "fl00r.h"
 #include "timer.h"
 #include "passenger.h"
 using namespace std;
@@ -13,7 +13,7 @@ public:
 	~lift();
 	int kill;
 	
-	void update(passenger*, passenger*, passenger*);
+	void update(passenger*, passenger*, passenger*,fl00r*, fl00r*);
 private:
 
 	bool passStatus=0;

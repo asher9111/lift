@@ -34,10 +34,14 @@ int main()
 		cout << "START ======================================================== START" << endl;
 		r.update(P1, P2, P3, L, f1, f2);
 
-		L->update(P1, P2, P3);
+		L->update(P1, P2, P3, f1, f2);
 
 		f1->update();
 		f2->update();
+
+		P1->update(f1, f2);
+		P2->update(f1, f2);
+		P3->update(f1, f2);
 
 
 

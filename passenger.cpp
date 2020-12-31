@@ -11,7 +11,7 @@ passenger::passenger()
 	destination = 0;
 	birthTime = 0;
 	sN = 0;
-	status = -1;													// 1 = in lift   0= on floor
+	status = 0;													// 1 = in lift   0= on floor
 	
 }
 
