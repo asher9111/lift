@@ -44,7 +44,7 @@ void passenger::update( fl00r*  f1, fl00r* f2)
 
 }
 
-void passenger::setPass(int a, int b, int c, int d)
+void passenger::setPass(int a, int b, int c, int d,int e)
 {
 	if (a < 3 && b < 3)
 	{
@@ -52,6 +52,7 @@ void passenger::setPass(int a, int b, int c, int d)
 		destination = b;
 		birthTime = c;
 		sN = d;
+		status = e;
 	}
 	else
 	{
@@ -60,7 +61,7 @@ void passenger::setPass(int a, int b, int c, int d)
 		destination = 0;
 		birthTime = 0;
 		sN = 0;
-		
+		status = -1;
 	}
 }
 
