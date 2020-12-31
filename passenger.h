@@ -24,6 +24,6 @@ protected:
 	int destination;
 	int birthTime;
 	int sN;
-
+	int status;
 
 };
