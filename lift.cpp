@@ -37,12 +37,31 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 	{
 		if (lift on floor1)
 		{
-			take pass on floor1
+			cout << "lift arriving to floor sN" << endl;
+			lamp is on
+				door opens
+
+			if (passenger(in lift) destination == floor sN)
+			{
+				kill passenger sN (in lift)
+				cout <<	passenger going out at floor sN
+			}
+
+			take pass on floor1 if exist
+				cout <<"passenger walk into the lift on floor sN" <<endl;
+			door closing 
+				lift gonna move
 		}
 
 		if (lift on floor2)
 		{
-			take pass on floor2
+			same
+		}
+
+		if (lift moving)
+		{
+			moving 5 sec
+				cout << lift moving to passenger destination;
 		}
 
 	}
