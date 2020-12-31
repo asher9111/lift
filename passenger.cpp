@@ -1,9 +1,8 @@
 #include "passenger.h"
-
 #include "fl00r.h"
 #include <iostream>
-
 using namespace std;
+ 
 
 passenger::passenger()
 {
@@ -12,7 +11,7 @@ passenger::passenger()
 	destination = 0;
 	birthTime = 0;
 	sN = 0;
-	status = 5;													// 1 = in lift   0= on floor
+	status = -1;													// 1 = in lift   0= on floor
 	
 }
 
@@ -35,6 +34,8 @@ void passenger::update( fl00r*  f1, fl00r* f2)
 	else
 	{
 		// do stuff in lift
+		cout << "im in lift" << endl;
+
 	}
 
 
