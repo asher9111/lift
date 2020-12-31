@@ -90,7 +90,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 
 
  
-	cout << "bloker = " << blocker << endl;
+	//cout << "bloker = " << blocker << endl;
 
 
 

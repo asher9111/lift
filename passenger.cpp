@@ -23,12 +23,12 @@ void passenger::update( fl00r*  f1, fl00r* f2)
 	{
 		if (spawn == 1)
 		{ 
-			f1->button = 1;
+			f1->button = true;
 		}
 
 		if (spawn == 2)
 		{
-			f2->button = 1;
+			f2->button = true;
 		}
 	}
 	else
@@ -61,7 +61,7 @@ void passenger::setPass(int a, int b, int c, int d,int e)
 		destination = 0;
 		birthTime = 0;
 		sN = 0;
-		status = -1;
+		status = 0;
 	}
 }
 

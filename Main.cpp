@@ -25,29 +25,39 @@ int main()
 	lift *L = new lift;
 
 	passenger* P1 = new passenger;
+	P1->setPass(0, 0, 0, 1, 0);
 	passenger* P2 = new passenger;
+	P2->setPass(0, 0, 0, 2, 0);
 	passenger* P3 = new passenger;
-
+	P3->setPass(0, 0, 0, 3, 0);
 
 	while (1)
 	{
 		cout << "START ======================================================== START" << endl;
-		r.update(P1, P2, P3, L, f1, f2);
+		
 
 		L->update(P1, P2, P3, f1, f2);
+		
+		r.update(P1, P2, P3, L, f1, f2);
 
-		f1->update();
-		f2->update();
+		
 
 		P1->update(f1, f2);
 		P2->update(f1, f2);
 		P3->update(f1, f2);
 
 
+		f1->update();
+		f2->update();
+
+
 
 
 		cout << "END ======================================================== END" << endl;
 		Sleep(1000);
+
+		char x = 'd';
+		cin >> x;
 	}
 
 
