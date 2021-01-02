@@ -20,6 +20,8 @@ void fl00r::update()
 	cout << "button " << button << endl;
 	cout << "lamp " << lamp << endl;
 
+	cout << "pass serial number is " << endl;
+
 	
 }
 

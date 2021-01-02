@@ -41,92 +41,108 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 
 
 
-
-
 	if (f1->button == false && f2->button == false && passStatus == 0)    // idle
 	{
 		cout << "lift sleeping" << endl;
+		state = 0;
 	}
-	else
+	
+	state = 1;
+	state = 2;
+	state = -1;
+	state = 0;
+
+
+
+
+	if (state == 1)													// on floor
 	{
-		state = 1;
+		cout << "lift arriving to floor 1" << endl;
+		cout << "lamp is on" << endl;                                        //lamp is on
+		cout << "door opens" << endl;
 
 
-
-
-		if (state == 1)													// on floor
+		if (sN == 1)
 		{
-			cout << "lift arriving to floor 1" <<  endl;
-			cout << "lamp is on" << endl;                                        //lamp is on
-			cout << "door opens" << endl;
- 
-			
-			if (sN == 1)
+			if (Ptr1->destination == 1)
 			{
-				if (Ptr1->destination == 1)
-				{
-					kill = 1; 
-					delete Ptr1;
-					cout << "passenger going out at floor 1" << endl;
-				}
+				kill = 1;
+				delete Ptr1;
+				cout << "passenger going out at floor 1" << endl;
 			}
-
-			if (sN == 2)
-			{
-				if (Ptr2->destination == 1)
-				{
-					kill = 2;
-					delete Ptr2;
-					cout << "passenger going out at floor 1" << endl;
-				}
-			}
-
-			if (sN == 3)
-			{
-				if (Ptr3->destination == 1)
-				{
-					kill = 3;
-					delete Ptr3;
-					cout << "passenger going out at floor 1" << endl;
-				}
-			}
-
-
-			
-
-			//take pass on floor1 if exist
-				cout <<"passenger walk into the lift on floor 1" <<endl;
-				cout << "door closing" << endl;
-				cout << "lamp is off" << endl;
-
-				state = -1;  // move
 		}
 
-		if (lift on floor2)
+		if (sN == 2)
 		{
-			same
+			if (Ptr2->destination == 1)
+			{
+				kill = 2;
+				delete Ptr2;
+				cout << "passenger going out at floor 1" << endl;
+			}
+		}
+
+		if (sN == 3)
+		{
+			if (Ptr3->destination == 1)
+			{
+				kill = 3;
+				delete Ptr3;
+				cout << "passenger going out at floor 1" << endl;
+			}
+		}
+
+
+
+
+		//take pass on floor1 if exist
+		if (f1->passExistence == 1)
+		{
+			cout << "passenger walk into the lift on floor 1" << endl;
+			cout << "door closing" << endl;
+			cout << "lamp is off" << endl;
+			f1->passExistence = 0;
+			passStatus = 1;
+
+			switch (f1->passSn)
+			{
+			case 1:
+				Ptr1->status = 1;
+				break;
+			case 2:
+				Ptr2->status = 1;
+				break;
+			case 3:
+				Ptr3->status = 1;
+				break;
+			default:
+				cout << "ERROR" << endl;
+
+			}
+
+
+
+
+			state = -1;  // move
+		}
+
+
+
+	}
+
+		if (state == 2)
+		{
+		//	same but 2
 		}
 
 		if (state == -1 )                                              //moving
 		{
 
 			move++;
+
 			if (move >= 5)
 			{
-				
-				switch (sN)
-				{
-				case 1:
-					state = Ptr1->destination;
-					break;
-				case 2:
-					state = Ptr2->destination;
-					break;
-				case 3:
-					state = Ptr3->destination;
-					break;	
-				}
-
+				state = liftDest;
 			}
 
 
@@ -139,18 +155,4 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 
 
 
-
-
-
-
-
-
-
-
-
-	
-	
-	//kill = 1;
-	//delete Ptr1;
-}
 

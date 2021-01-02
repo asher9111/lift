@@ -112,9 +112,16 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 				Ptr1->yell();
 
 				if (a == 1)
+				{
 					f1->passExistence = 1;
+					f1->passSn = 1;
+				}
 				if (a == 2)
+				{
 					f2->passExistence = 1;
+					f2->passSn = 1;
+				}
+					
 
 			}
 
@@ -126,9 +133,17 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 				Ptr2->setPass(a, b, passTime, 2,0);								//spawnfloor destinationfloor birthday serialNumber
 				Ptr2->yell();
 				if (a == 1)
+				{
 					f1->passExistence = 1;
+					f1->passSn = 2;
+				}
 				if (a == 2)
+				{
 					f2->passExistence = 1;
+					f2->passSn = 2;
+				}
+
+				
 			}
 
 
@@ -139,9 +154,16 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 				Ptr3->setPass(a, b, passTime, 3,0);								//spawnfloor destinationfloor birthday serialNumber
 				Ptr3->yell();
 				if (a == 1)
+				{
 					f1->passExistence = 1;
+					f1->passSn = 3;
+				}
 				if (a == 2)
+				{
 					f2->passExistence = 1;
+					f2->passSn = 3;
+				}
+					
 			}
 
 		}

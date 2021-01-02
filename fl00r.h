@@ -12,4 +12,6 @@ public:
 
 	 void update();
 	 void set(int);
+
+	 int passSn=0;
 };
