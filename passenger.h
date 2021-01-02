@@ -18,12 +18,15 @@ public:
 	int getBirthday();
 
 	~passenger();
-protected:
 
+	int sN;
 	int spawn;
 	int destination;
-	int birthTime;
-	int sN;
 	int status;
+protected:
+
+	
+	int birthTime;
+	
 
 };

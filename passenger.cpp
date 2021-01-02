@@ -35,6 +35,7 @@ void passenger::update( fl00r*  f1, fl00r* f2)
 	{
 		// do stuff in lift
 		cout << "im in lift" << endl;
+		status = 1;
 
 	}
 
