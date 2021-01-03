@@ -16,6 +16,7 @@ lift::lift()
 {
 	button = 0;
 	kill = 0;
+
 }
 
 lift::~lift()
@@ -28,7 +29,7 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 	//time
 
 
-	cout << "lift update ---------" << endl;
+	std::cout << "lift update ---------" << endl;
 
 	int sN = 0;
 	if (Ptr1->status == 1)
@@ -51,6 +52,7 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 	if (f1->button == true || f2->button == true || passStatus == 1 )
 	{
 		state = -1;
+
 	}
 
 	if (passStatus == 1)
@@ -96,6 +98,8 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 
 
 
+	std::cout << "lift status " << state << endl;
+	std::cout << "lift destination " << liftDest << endl;
 
 
 
@@ -214,16 +218,16 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 
 
 
-		//take pass on floor1 if exist
-		if (f1->passExistence == 1)
+		//take pass on floor2 if exist
+		if (f2->passExistence == 1)
 		{
-			cout << "passenger walk into the lift on floor 1" << endl;
+			cout << "passenger walk into the lift on floor 2" << endl;
 			cout << "door closing" << endl;
 			cout << "lamp is off" << endl;
-			f1->passExistence = 0;
+			f2->passExistence = 0;
 			passStatus = 1;
 
-			switch (f1->passSn)
+			switch (f2->passSn)
 			{
 			case 1:
 				Ptr1->status = 1;
@@ -258,6 +262,7 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 			{
 				state = liftDest;
 				move = 0;
+
 			}
 
 

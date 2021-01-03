@@ -24,12 +24,17 @@ respawner::~respawner()
 void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* Lift, fl00r* f1, fl00r* f2 )
 {
 
-	
+	cout << "respawner code start----------" << endl;
+
+
 
 
 	respawner::tick();																			//logical time inside respawner (int)
 	passTime = time;
 	//cout << "time in respawner ="  << passTime << endl;
+
+
+
 	
 
 	const int size = 3;																			//calculate newest passenger
@@ -90,7 +95,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 
 
  
-	//cout << "bloker = " << blocker << endl;
+	cout << "bloker = " << blocker << endl;
 
 
 
@@ -104,9 +109,26 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 		if (blocker != true )
 		{
 
+			if (Lift->kill == 0)
+			{
+				cout << "lift kill == 0 i dont know what to do" << endl;
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
 			if (Lift->kill == 1)
 			{
-				//delete Ptr1;
+				
 				Ptr1 = new passenger;
 				Ptr1->setPass(a, b, passTime, 1,0);								//spawnfloor destinationfloor birthday serialNumber
 				Ptr1->yell();
@@ -166,6 +188,8 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 					
 			}
 
+			
+
 		}
 		else
 		{
@@ -181,7 +205,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 	}
 	
 
-	
+	cout << "respawner code end-----------" << endl;
 }
 
 

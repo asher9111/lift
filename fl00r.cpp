@@ -14,13 +14,16 @@ fl00r::fl00r(bool a, bool b, bool c)
 
 void fl00r::update()
 {
+	
+
+
 
 	cout << "floor " << index<< "---------" << endl;
 	cout << "passExistence " << passExistence << endl;
 	cout << "button " << button << endl;
 	cout << "lamp " << lamp << endl;
 
-	cout << "pass serial number is " << endl;
+	//cout << "pass serial number is " << endl;
 
 	
 }
