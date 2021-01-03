@@ -33,6 +33,8 @@ int main()
 
 	while (1)
 	{
+		system("CLS");
+		//cout << flush;
 		cout << "START ======================================================== START" << endl;
 		
 
@@ -56,8 +58,10 @@ int main()
 		cout << "END ======================================================== END" << endl;
 		//Sleep(1000);
 
-		char x = 'x';
-		cin >> x;
+		//char x = 'x';
+		//cin >> x;
+
+		system("PAUSE");
 	}
 
 

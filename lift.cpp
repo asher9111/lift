@@ -253,7 +253,7 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 
 	}
 
-	if (state == -1 )                                              //moving
+	if (state == -1)                                              //moving
 		{
 
 			move++;

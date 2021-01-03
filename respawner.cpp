@@ -98,7 +98,8 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 	cout << "bloker = " << blocker << endl;
 
 
-
+	extern int init;// need to be global
+	init = 1;
 
 	
 	if (lastBirth > rand()%5+5)												//  (need to check floor before spawn)
@@ -113,11 +114,32 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 			{
 				cout << "lift kill == 0 i dont know what to do" << endl;
 
+				if (time < 30 && init == 3)
+				{
+					cout << "init=" << init << endl;
+					Ptr3 = new passenger;
+					Ptr3->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber
+					Ptr3->yell();
+					init++;
+				}
 
+				if (time < 20 && init == 2)
+				{
+					cout << "init=" << init << endl;
+					Ptr2 = new passenger;
+					Ptr2->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber
+					Ptr2->yell();
+					init++;
+				}
 
-
-
-
+				if (time < 10 && init == 1)
+				{
+					cout << "init=" << init << endl;
+					Ptr1 = new passenger;
+					Ptr1->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber
+					Ptr1->yell();
+					init++;
+				}
 
 			}
 

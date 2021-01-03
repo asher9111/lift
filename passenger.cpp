@@ -11,7 +11,9 @@ passenger::passenger()
 	destination = 0;
 	birthTime = 0;
 	sN = 0;
-	status = 0;													// 1 = in lift   0= on floor
+	status = 0;										// 1 = in lift   0= on floor
+
+	cout << "passenger constructor done !" << endl;
 	
 }
 
@@ -60,6 +62,8 @@ void passenger::setPass(int a, int b, int c, int d,int e)
 		birthTime = c;
 		sN = d;
 		status = e;
+
+		cout << "setPass done" << " spawn-" << a << " dest-" << b << " birth-" << c << " sN-" << sN << " status-" << e << endl;
 	}
 	else
 	{
