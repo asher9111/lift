@@ -48,20 +48,51 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 	}
 
 
+	if (f1->button == true || f2->button == true || passStatus == 1 )
+	{
+		state = -1;
+	}
 
+	if (passStatus == 1)
+	{
+		switch (sN)
+		{
+		case 1:
+			liftDest = Ptr1->destination;
+			break;
+		case 2:
+			liftDest = Ptr2->destination;
+			break;
+		case 3:
+			liftDest = Ptr3->destination;
+			break;
+		default:
+			cout << "ERROR in passStatus == 1" << endl;
 
+		}
 
-	
-	state = 1;
-	state = 2;
-	state = -1;
-	
+		
+	}
 
+	if (passStatus == 0 && f1->button == 1)
+	{
+		state = -1;
+		liftDest = 1;
+	}
 
+	if (passStatus == 0 && f2->button == 1)
+	{
+		state = -1;
+		liftDest = 2;
+	}
 
-
-
-
+	if (passStatus == 0 && f1->button == 1 && f2->button == 1)
+	{
+		
+		liftDest = 1;											// floor selection needed ? 
+		
+		state = -1;
+	}
 
 
 
@@ -217,8 +248,6 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 
 
 	}
-
-	
 
 	if (state == -1 )                                              //moving
 		{
