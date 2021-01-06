@@ -118,7 +118,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 				{
 					cout << "init=" << init << endl;
 					Ptr3 = new passenger;
-					Ptr3->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber
+					Ptr3->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber status
 					Ptr3->yell();
 					init++;
 				}
@@ -127,7 +127,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 				{
 					cout << "init=" << init << endl;
 					Ptr2 = new passenger;
-					Ptr2->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber
+					Ptr2->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber status
 					Ptr2->yell();
 					init++;
 				}
@@ -136,7 +136,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 				{
 					cout << "init=" << init << endl;
 					Ptr1 = new passenger;
-					Ptr1->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber
+					Ptr1->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber status
 					Ptr1->yell();
 					init++;
 				}
@@ -152,7 +152,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 			{
 				
 				Ptr1 = new passenger;
-				Ptr1->setPass(a, b, passTime, 1,0);								//spawnfloor destinationfloor birthday serialNumber
+				Ptr1->setPass(a, b, passTime, 1,0);								//spawnfloor destinationfloor birthday serialNumber status
 				Ptr1->yell();
 
 				if (a == 1)
@@ -174,7 +174,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 			{
 
 				Ptr2 = new passenger;
-				Ptr2->setPass(a, b, passTime, 2,0);								//spawnfloor destinationfloor birthday serialNumber
+				Ptr2->setPass(a, b, passTime, 2,0);								//spawnfloor destinationfloor birthday serialNumber status
 				Ptr2->yell();
 				if (a == 1)
 				{
@@ -195,7 +195,7 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 			{
 
 				Ptr3 = new passenger;
-				Ptr3->setPass(a, b, passTime, 3,0);								//spawnfloor destinationfloor birthday serialNumber
+				Ptr3->setPass(a, b, passTime, 3,0);								//spawnfloor destinationfloor birthday serialNumber status
 				Ptr3->yell();
 				if (a == 1)
 				{
