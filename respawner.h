@@ -17,4 +17,5 @@ public:
 protected:
 
 	int passTime;
+	int init = 1;
 };

@@ -98,8 +98,8 @@ void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* 
 	cout << "bloker = " << blocker << endl;
 
 
-	extern int init;// need to be global
-	init = 1;
+	//extern int init;// need to be global
+	//init = 1;
 
 	
 	if (lastBirth > rand()%5+5)												//  (need to check floor before spawn)
