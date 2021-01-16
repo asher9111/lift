@@ -21,7 +21,7 @@ respawner::~respawner()
 {
 }
 
-void respawner::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3, lift* Lift, fl00r* f1, fl00r* f2 )
+void respawner::update(passenger*& Ptr1, passenger*& Ptr2, passenger* &Ptr3, lift* Lift, fl00r* f1, fl00r* f2 )
 {
 
 	cout << "respawner code start----------" << endl;
