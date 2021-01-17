@@ -49,11 +49,10 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 	}
 
 
-	if (f1->button == true || f2->button == true || passStatus == 1 )
+	/*if (f1->button == true || f2->button == true || passStatus == 1 )
 	{
 		state = -1;
-
-	}
+	}*/
 
 	if (passStatus == 1)
 	{
@@ -78,14 +77,20 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 
 	if (passStatus == 0 && f1->button == 1)
 	{
-		state = -1;
-		liftDest = 1;
+		if (state != 2 && state != 1)
+		{
+			state = -1;
+			liftDest = 1;
+		}
 	}
 
 	if (passStatus == 0 && f2->button == 1)
 	{
-		state = -1;
-		liftDest = 2;
+		if (state != 2 && state != 1)
+		{
+			state = -1;
+			liftDest = 2;
+		}
 	}
 
 	if (passStatus == 0 && f1->button == 1 && f2->button == 1)
@@ -150,6 +155,7 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 			cout << "door closing" << endl;
 			cout << "lamp is off" << endl;
 			f1->passExistence = 0;
+			f1->button = 0;
 			passStatus = 1;
 
 			switch (f1->passSn)
@@ -225,6 +231,7 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 			cout << "door closing" << endl;
 			cout << "lamp is off" << endl;
 			f2->passExistence = 0;
+			f2->button = 0;
 			passStatus = 1;
 
 			switch (f2->passSn)

@@ -32,11 +32,13 @@ void passenger::update( fl00r*  f1, fl00r* f2)
 		if (spawn == 1)
 		{ 
 			f1->button = true;
+			f1->passExistence = 1;
 		}
 
 		if (spawn == 2)
 		{
 			f2->button = true;
+			f2->passExistence = 1;
 		}
 	}
 	else
