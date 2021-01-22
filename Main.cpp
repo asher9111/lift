@@ -38,15 +38,21 @@ int main()
 		cout << "START ======================================================== START" << endl;
 		
 
-		L->update(P1, P2, P3, f1, f2);
+		
 		
 		r.update(P1, P2, P3, L, f1, f2);
+		cout << endl;
+
+
+		L->update(P1, P2, P3, f1, f2);
+		cout << endl;
 
 		
 
 		P1->update(f1, f2);
 		P2->update(f1, f2);
 		P3->update(f1, f2);
+		cout << endl;
 
 
 		f1->update();

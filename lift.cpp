@@ -96,10 +96,11 @@ void lift::update(passenger* Ptr1, passenger* Ptr2, passenger* Ptr3,fl00r* f1,fl
 	if (passStatus == 0 && f1->button == 1 && f2->button == 1)
 	{
 		
-		liftDest = 1;											// floor selection needed ? 
+		liftDest = 1;											// floor selection by older passenger
 		
 		state = -1;
-	}
+	} 
+	// floor selection !!!!!!!!!
 
 
 
