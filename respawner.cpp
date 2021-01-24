@@ -112,13 +112,13 @@ void respawner::update(passenger*& Ptr1, passenger*& Ptr2, passenger* &Ptr3, lif
 
 			if (Lift->kill == 0)
 			{
-				cout << "lift kill == 0 i dont know what to do" << endl;
+				cout << "lift kill == 0 initialization block in progress" << endl;
 
 				if (time < 30 && init == 3)
 				{
 					cout << "init=" << init << endl;
 					Ptr3 = new passenger;
-					Ptr3->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber status
+					Ptr3->setPass(a, b, passTime, 3, 0);								//spawnfloor destinationfloor birthday serialNumber status
 					Ptr3->yell();
 					init++;
 
@@ -138,7 +138,7 @@ void respawner::update(passenger*& Ptr1, passenger*& Ptr2, passenger* &Ptr3, lif
 				{
 					cout << "init=" << init << endl;
 					Ptr2 = new passenger;
-					Ptr2->setPass(a, b, passTime, 1, 0);								//spawnfloor destinationfloor birthday serialNumber status
+					Ptr2->setPass(a, b, passTime, 2, 0);								//spawnfloor destinationfloor birthday serialNumber status
 					Ptr2->yell();
 					init++;
 

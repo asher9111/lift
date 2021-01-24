@@ -13,7 +13,7 @@ public:
 	~lift();
 	int kill;
 	
-	void update(passenger*, passenger*, passenger*,fl00r*, fl00r*);
+	void update(passenger*&, passenger*&, passenger*&,fl00r*, fl00r*);
 private:
 
 	bool passStatus=0;
