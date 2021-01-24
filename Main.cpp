@@ -48,9 +48,13 @@ int main()
 		cout << endl;
 
 		
-
+		if(P1 != 0)
 		P1->update(f1, f2);
+
+		if (P2 != 0)
 		P2->update(f1, f2);
+
+		if (P3 != 0)
 		P3->update(f1, f2);
 		cout << endl;
 
