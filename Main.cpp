@@ -77,11 +77,11 @@ int main()
 
 
 		cout << "END ======================================================== END" << endl;
-		Sleep(100);
+		//Sleep(100);
 
 	
 
-		//system("PAUSE");
+		system("PAUSE");
 	}
 
 

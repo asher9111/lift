@@ -52,6 +52,12 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 
 	cout << "sN = " << sN << endl;
 
+
+
+
+
+
+
 	if (f1->button == false && f2->button == false && passStatus == 0)    // idle
 	{
 		cout << "lift sleeping" << endl;
@@ -116,10 +122,13 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 
 		if (passStatus == 0 && f1->button == 1 && f2->button == 1)
 		{
-
-			liftDest = 1;											// floor selection by older passenger
-
-			state = -1;
+			if (state != 2 && state != 1)
+			{
+				liftDest = 1;
+				state = -1;
+			
+			}
+			
 		}
 		// floor selection !!!!!!!!!
 
@@ -338,6 +347,8 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 
 
 	}
+
+	cout << "Kill mark = " << kill << endl;
 }
 
 
