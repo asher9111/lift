@@ -125,7 +125,7 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 
 
 
-		std::cout << "lift status " << state << endl;
+		std::cout << "lift state " << state << endl;
 		std::cout << "lift destination " << liftDest << endl;
 
 
@@ -188,7 +188,7 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 				f1->passExistence = 0;
 				f1->button = 0;
 				passStatus = 1;
-				f1->passSn = 0;
+				
 				
 
 				switch (f1->passSn)
@@ -197,18 +197,21 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 					if (Ptr1 != 0)
 					{
 						Ptr1->status = 1;
+						f1->passSn = 0;
 					}
 					break;
 				case 2:
 					if (Ptr2 != 0)
 					{
 						Ptr2->status = 1;
+						f1->passSn = 0;
 					}
 					break;
 				case 3:
 					if (Ptr3 != 0)
 					{
 						Ptr3->status = 1;
+						f1->passSn = 0;
 					}
 					break;
 				default:
@@ -288,7 +291,7 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 				f2->passExistence = 0;
 				f2->button = 0;
 				passStatus = 1;
-				f2->passSn = 0;
+				
 
 				switch (f2->passSn)
 				{
@@ -296,6 +299,7 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 					if (Ptr1 != 0)
 					{
 						Ptr1->status = 1;
+						f2->passSn = 0;
 					}
 					else cout << "ERROR Ptr1" << endl;
 					break;
@@ -303,12 +307,14 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 					if (Ptr2 != 0)
 					{
 						Ptr2->status = 1;
+						f2->passSn = 0;
 					}
 					break;
 				case 3:
-					if (Ptr2 != 0)
+					if (Ptr3 != 0)
 					{
-						Ptr2->status = 1;
+						Ptr3->status = 1;
+						f2->passSn = 0;
 					}
 					break;
 				default:
