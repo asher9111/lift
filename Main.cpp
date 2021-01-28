@@ -44,23 +44,34 @@ int main()
 		cout << endl;
 
 
-		L->update(P1, P2, P3, f1, f2);
-		cout << endl;
-
-		
-		if(P1 != 0)
-		P1->update(f1, f2);
+		if (P1 != 0)
+			P1->update(f1, f2);
 
 		if (P2 != 0)
-		P2->update(f1, f2);
+			P2->update(f1, f2);
 
 		if (P3 != 0)
-		P3->update(f1, f2);
-		cout << endl;
+			P3->update(f1, f2);
 
+		cout << endl;
 
 		f1->update();
 		f2->update();
+		cout << endl;
+
+
+		
+		
+		
+
+
+
+		L->update(P1, P2, P3, f1, f2);
+		
+		
+
+
+	
 
 
 
@@ -68,10 +79,9 @@ int main()
 		cout << "END ======================================================== END" << endl;
 		//Sleep(1000);
 
-		//char x = 'x';
-		//cin >> x;
+	
 
-		system("PAUSE");
+		//system("PAUSE");
 	}
 
 

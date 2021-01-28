@@ -32,17 +32,25 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 	std::cout << "lift update ---------" << endl;
 
 	int sN = 0;
-	if (Ptr1->status == 1)
-		sN = 1;
+	if (Ptr1 != 0)
+	{
+		if (Ptr1->status == 1)
+			sN = 1;
+	}
 	else
-		if (Ptr2->status == 1)
-			sN = 2;
+		if (Ptr2 != 0) 
+		{
+			if (Ptr2->status == 1)
+				sN = 2;
+		}
 		else
-			if (Ptr3->status == 1)
-				sN = 3;
+			if (Ptr3 != 0)
+			{
+				if (Ptr3->status == 1)
+					sN = 3;
+			}
 
-
-
+	cout << "sN = " << sN << endl;
 
 	if (f1->button == false && f2->button == false && passStatus == 0)    // idle
 	{
@@ -137,7 +145,8 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 					delete Ptr1;
 					Ptr1 = 0;
 					cout << "passenger going out at floor 1" << endl;
-					
+					passStatus = 0;
+					state = 0;
 				}
 			}
 
@@ -149,6 +158,8 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 					delete Ptr2;
 					Ptr2 = 0;
 					cout << "passenger going out at floor 1" << endl;
+					passStatus = 0;
+					state = 0;
 				}
 			}
 
@@ -160,6 +171,8 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 					delete Ptr3;
 					Ptr3 = 0;
 					cout << "passenger going out at floor 1" << endl;
+					passStatus = 0;
+					state = 0;
 				}
 			}
 
@@ -175,18 +188,28 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 				f1->passExistence = 0;
 				f1->button = 0;
 				passStatus = 1;
+				f1->passSn = 0;
 				
 
 				switch (f1->passSn)
 				{
 				case 1:
-					Ptr1->status = 1;
+					if (Ptr1 != 0)
+					{
+						Ptr1->status = 1;
+					}
 					break;
 				case 2:
-					Ptr2->status = 1;
+					if (Ptr2 != 0)
+					{
+						Ptr2->status = 1;
+					}
 					break;
 				case 3:
-					Ptr3->status = 1;
+					if (Ptr3 != 0)
+					{
+						Ptr3->status = 1;
+					}
 					break;
 				default:
 					cout << "ERROR" << endl;
@@ -221,6 +244,8 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 					delete Ptr1;
 					Ptr1 = 0;
 					cout << "passenger going out at floor 2" << endl;
+					passStatus = 0;
+					state = 0;
 				}
 			}
 
@@ -232,6 +257,8 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 					delete Ptr2;
 					Ptr2 = 0;
 					cout << "passenger going out at floor 2" << endl;
+					passStatus = 0;
+					state = 0;
 				}
 			}
 
@@ -243,6 +270,8 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 					delete Ptr3;
 					Ptr3 = 0;
 					cout << "passenger going out at floor 2" << endl;
+					passStatus = 0;
+					state = 0;
 					
 				}
 			}
@@ -259,17 +288,28 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 				f2->passExistence = 0;
 				f2->button = 0;
 				passStatus = 1;
+				f2->passSn = 0;
 
 				switch (f2->passSn)
 				{
 				case 1:
-					Ptr1->status = 1;
+					if (Ptr1 != 0)
+					{
+						Ptr1->status = 1;
+					}
+					else cout << "ERROR Ptr1" << endl;
 					break;
 				case 2:
-					Ptr2->status = 1;
+					if (Ptr2 != 0)
+					{
+						Ptr2->status = 1;
+					}
 					break;
 				case 3:
-					Ptr3->status = 1;
+					if (Ptr2 != 0)
+					{
+						Ptr2->status = 1;
+					}
 					break;
 				default:
 					cout << "ERROR" << endl;

@@ -20,9 +20,9 @@ passenger::passenger()
 void passenger::update( fl00r*  f1, fl00r* f2)
 {
 	
-	//cout << "passenger " << sN << " update" << endl;
+	cout << "passenger " << sN << " update" << endl;
 
-	//cout << " spawn-" << spawn << " destination-" << destination << " Birth-" << birthTime << " in lift-" << status << endl;
+	cout << " spawn-" << spawn << " destination-" << destination << " Birth-" << birthTime << " in lift-" << status << endl;
 
 
 
