@@ -37,13 +37,13 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 		if (Ptr1->status == 1)
 			sN = 1;
 	}
-	else
+	
 		if (Ptr2 != 0) 
 		{
 			if (Ptr2->status == 1)
 				sN = 2;
 		}
-		else
+		
 			if (Ptr3 != 0)
 			{
 				if (Ptr3->status == 1)

@@ -341,7 +341,7 @@ void respawner::update(passenger*& Ptr1, passenger*& Ptr2, passenger* &Ptr3, lif
 	else
 	{
 	int status = 0;
-	cout << "no spawn !!" << endl;
+	cout << "no spawn by timer!!" << endl;
 
 	}
 		
