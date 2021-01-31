@@ -81,7 +81,7 @@ int main()
 
 	
 
-	//	system("PAUSE");
+	   system("PAUSE");
 	}
 
 

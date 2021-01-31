@@ -71,7 +71,8 @@ void lift::update(passenger*& Ptr1, passenger*& Ptr2, passenger*& Ptr3, fl00r* f
 
 		cout << "lift is moving ------ " << move << "s" << endl;
 		cout << "lift destination is " << liftDest << endl;
-		if (move == 5)
+		// lift movement period = 10 now (can be changed)
+		if (move == 10)
 		{
 			state = liftDest;
 			move = 0;

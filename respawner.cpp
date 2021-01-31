@@ -135,7 +135,7 @@ void respawner::update(passenger*& Ptr1, passenger*& Ptr2, passenger* &Ptr3, lif
 			{
 				cout << "lift kill == " << Lift->kill << " initialization block in progress" << endl;
 
-				if (/*time < 30 && */init == 3)
+				if (init == 3)
 				{
 					cout << "init=" << init << endl;
 					Ptr3 = new passenger;
@@ -156,7 +156,7 @@ void respawner::update(passenger*& Ptr1, passenger*& Ptr2, passenger* &Ptr3, lif
 					}
 				}
 
-				if (/*time < 20 &&*/ init == 2)
+				if ( init == 2)
 				{
 					cout << "init=" << init << endl;
 					Ptr2 = new passenger;
@@ -177,7 +177,7 @@ void respawner::update(passenger*& Ptr1, passenger*& Ptr2, passenger* &Ptr3, lif
 					}
 				}
 
-				if (/*time < 10 &&*/ init == 1)
+				if ( init == 1)
 				{
 					cout << "init=" << init << endl;
 					Ptr1 = new passenger;
